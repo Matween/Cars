@@ -1,0 +1,8 @@
+  <span ng-show="($ctrl.car.owner.user_id === $ctrl.currentUser.user_id)">
+    <button class="btn btn-sm btn-outline-danger"
+      ng-class="{disabled: $ctrl.isDeleting}"
+      ng-click="$ctrl.deleteCar()">
+      Delete Car
+      <i class="ion-trash-a"></i> 
+    </button>
+  </span>

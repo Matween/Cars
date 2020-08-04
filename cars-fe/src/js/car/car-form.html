@@ -1,0 +1,92 @@
+<div class="settings-page">
+    <div class="container page">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+  
+          <h1 class="text-xs-center">Add a car</h1>
+          
+          <form ng-submit="$ctrl.submitCarForm()">
+            <fieldset ng-disabled="$ctrl.isSubmitting">
+  
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="URL of car picture"
+                  ng-model="$ctrl.carData.car_picture" />
+              </fieldset>
+  
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Brand"
+                  ng-model="$ctrl.carData.brand" />
+              </fieldset>
+  
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Model"
+                  ng-model="$ctrl.carData.model" />
+              </fieldset>
+  
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="datetime"
+                  placeholder="Year"
+                  ng-model="$ctrl.carData.year" />
+              </fieldset>
+  
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Driven km"
+                  ng-model="$ctrl.carData.driven_km" />
+              </fieldset>
+
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Color"
+                  ng-model="$ctrl.carData.color" />
+              </fieldset>
+
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Chassis type"
+                  ng-model="$ctrl.carData.chassis" />
+              </fieldset>
+
+              <fieldset class="form-check">
+                <input class="form-check-input"
+                type="checkbox"
+                ng-model="$ctrl.carData.crashed" />
+                <label class="form-check-label">Was the car ever crashed?</label>
+              </fieldset>
+
+              <fieldset class="form-group">
+                <input class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Price (EUR)"
+                  ng-model="$ctrl.carData.price" />
+              </fieldset>
+
+              <fieldset class="form-group">
+                <textarea class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Description"
+                  ng-model="$ctrl.carData.description"></textarea>
+              </fieldset>
+
+              <button class="btn btn-lg btn-primary pull-xs-right"
+                type="submit">
+                Add
+              </button>
+  
+            </fieldset>
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+  

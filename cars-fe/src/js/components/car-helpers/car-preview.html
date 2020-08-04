@@ -1,0 +1,17 @@
+<div class="car-preview">
+
+  <div  class="card">
+    <div class="card-header">
+      <a ui-sref="app.Car({ slug: $ctrl.car.car_id })">
+        <h4 ng-bind="($ctrl.car.brand) + (' ') + ($ctrl.car.model)"></h4>
+      </a>
+      <p class="card-text">
+        <span><span ng-bind="$ctrl.car.year" class="badge badge-pill badge-primary"></span></span>
+        <span><span ng-bind="($ctrl.car.driven_km) + ' km'" class="badge badge-pill badge-primary"></span></span>
+        <span><span ng-bind="($ctrl.car.price | number:'1.0') + ' €'"
+            class="badge badge-pill badge-primary"></span></span>
+      </p>
+    </div>
+    <img class="card-img-top" ng-src="{{$ctrl.car.car_picture}}" alt="Card image cap" />
+  </div>
+</div>

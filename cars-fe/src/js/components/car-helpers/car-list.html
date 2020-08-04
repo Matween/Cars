@@ -1,0 +1,26 @@
+<car-preview class="col-md-4 col-sm-6 col-xs-12 mt-4"
+  car="car"
+  ng-repeat="car in $ctrl.list | orderBy:$ctrl.property.prop:$ctrl.reverse | filter:search">
+</car-preview>
+
+<div class="container mt-4"
+  ng-hide="!$ctrl.loading">
+  <div class="row align-self-center h-100">
+    <div class="col-6 mx-auto">
+      <div class="jumbotron text-center">
+        Loading cars...
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4"
+  ng-show="!$ctrl.loading && !$ctrl.list.length">
+  <div class="row align-self-center h-100">
+    <div class="col-6 mx-auto">
+      <div class="jumbotron text-center">
+        No cars yet.
+      </div>
+    </div>
+  </div>
+</div>

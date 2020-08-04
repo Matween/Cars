@@ -1,0 +1,37 @@
+<div class="home-page">
+
+  <!-- Banner that only shows when not logged in -->
+  <div class="bg-info text-light" show-authed="false">
+    <div class="container py-2">
+      <h1 ng-bind="::$ctrl.appName" class="text-center"></h1>
+      <p class="text-center">
+        A place to buy or sell cars. <br />
+        Find your dream car today.
+      </p>
+      <div class="d-flex justify-content-center">
+        <button ui-sref="app.register" class="btn btn-success">Join</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner that only shows when logged in -->
+  <div class="bg-info text-light" show-authed="true">
+    <div class="container py-2">
+      <div class="d-flex justify-content-center">
+        <button ui-sref="app.CarForm" class="btn btn-success">Add a Car</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div>
+
+      <!-- List the current cars -->
+      <car-sorting></car-sorting>
+
+    </div>
+    <!-- End the row & container divs -->
+  </div>
+</div>
+
+</div>

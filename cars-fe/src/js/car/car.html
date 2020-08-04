@@ -1,0 +1,41 @@
+<div class="car-page">
+  <!-- Main view. Contains car html -->
+  <div class="container page pt-4">
+
+    <!-- Car's HTML rendered here -->
+    <div  class="card">
+      <div class="card-header">
+        <h4 ng-bind="($ctrl.carInfo.brand) + (' ') + ($ctrl.carInfo.model)"></h4>
+        <p class="card-text">
+          <span><span ng-bind="$ctrl.carInfo.year" class="badge badge-pill badge-primary"></span></span>
+          <span><span ng-bind="($ctrl.carInfo.driven_km) + ' km'" class="badge badge-pill badge-primary"></span></span>
+          <span><span ng-bind="($ctrl.carInfo.price | number:'1.0') + ' €'"
+              class="badge badge-pill badge-primary"></span></span>
+
+          <span><span ng-bind="$ctrl.carInfo.color" class="badge badge-pill badge-primary"></span></span>
+          <span ng-hide="($ctrl.carInfo.crashed === false)"><span class="badge badge-pill badge-primary">Crashed</span></span>
+          <span><span ng-bind="$ctrl.carInfo.chassis" class="badge badge-pill badge-primary"></span></span>
+        </p>
+      </div>
+      <img class="card-img-top" ng-src="{{$ctrl.carInfo.car_picture}}" alt="Card image cap" />
+      <div class="card-body">
+          <div ng-bind-html="$ctrl.car.description">
+          </div>
+        <br><br>
+        <a href="mailto:{{ $ctrl.owner.email}}" class="btn btn-primary">Contact seller</a>
+      </div>
+
+    </div>
+
+    <hr />
+
+    <div class="car-actions">
+
+      <car-actions car="$ctrl.car"></car-actions>
+
+    </div>
+  </div>
+
+
+
+</div>

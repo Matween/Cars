@@ -1,0 +1,25 @@
+    <div class="card mt-4">
+        <div class="card-body">
+            <div class="card-title uppercase">Sort</div>
+            <button ng-click="$ctrl.property = {}; $ctrl.reverse = false;" class="btn btn-primary">
+                Unsort
+            </button>
+            <button ng-click="sortBy('price')" class="btn btn-outline-secondary">
+                Price
+            </button>
+            <button ng-click="sortBy('model')" class="btn btn-outline-secondary">
+                Model
+            </button>
+            <button ng-click="sortBy('brand')" class="btn btn-outline-secondary">
+                Brand
+            </button>
+            <button ng-click="sortBy('driven_km')" class="btn btn-outline-secondary">
+                Driven km
+            </button>
+            <button ng-click="sortBy('year')" class="btn btn-outline-secondary">
+                Year
+            </button>
+        </div>
+    </div>
+
+    <car-list class="row" property="$ctrl.property" reverse="$ctrl.reverse"></car-list>

@@ -1,0 +1,39 @@
+<div class="profile-page mt-4">
+
+  <!-- User's basic info & action buttons -->
+  <div class="user-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 offset-md-1">
+          <a ui-sref="app.settings" class="btn btn-sm btn-outline-secondary action-btn" ng-show="$ctrl.isUser">
+            <i class="ion-gear-a"></i> Edit Profile Settings
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      
+      <div class="col-xs-12 col-md-10 offset-md-1">
+
+        <div class="cars-toggle">
+          <h1>My Cars</h1>
+        </div>
+
+        <car-list-directive ng-model="search.user_id"></car-list-directive>
+
+        <!-- List of cars -->
+        <car-preview-profile class="col-md-4 col-sm-6 col-xs-12 mt-4"
+        car="car"
+        ng-repeat="car in $ctrl.list | filter:search">
+      </car-preview-profile>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
